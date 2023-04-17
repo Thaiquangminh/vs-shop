@@ -36,5 +36,6 @@ p
   font-family: 'Rubik', sans-serif
 
 .hover-effect
-  transition: all 0.3s ease-in-out
+  transition: all 0.4s ease-in-out
+  transition-property: unset !important
 </style>

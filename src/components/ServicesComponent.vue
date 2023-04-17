@@ -1,5 +1,5 @@
 <template>
-  <v-container class="services-wrapper">
+  <v-container fluid class="services-wrapper">
     <HeaderSection :header="servicesHeader" />
     <v-row>
       <v-col
@@ -40,6 +40,7 @@ export default {
         title: "OUR SERVICES",
         subtitle:
           "We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients.",
+        haveDivider: true,
       },
       services: [
         {
@@ -101,9 +102,6 @@ export default {
 .services-title-item
   text-align: center
   width: 100%
-
-.hover-effect
-  transition: all 0.3s ease-in-out
 
 .hover-effect:hover
   transform: translateY(-0.6rem)

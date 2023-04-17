@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pricing-wrapper">
+  <v-container fluid class="pricing-wrapper">
     <HeaderSection :header="pricingHeader" />
     <v-row>
       <v-col
@@ -63,6 +63,7 @@ export default {
         title: "OUR PRICING",
         subtitle:
           "Call to action pricing table is really crucial to your for your business website. Make your bids stand-out with amazing options.",
+        haveDivider: true,
       },
       packs: [
         {
@@ -110,9 +111,8 @@ export default {
 <style lang="sass" scoped>
 .pricing-wrapper
   background-color: #f8f9fa
-  margin-top: 20px
   margin-bottom: 20px
-  padding: 50px 30px
+  padding: 10px 30px 30px 30px
 
 .pricing-text
   font-weight: 500
@@ -145,9 +145,6 @@ b
 p
   padding-top: 5px
   font-weight: 600
-
-.hover-effect
-  transition: all 0.4s ease-in-out
 
 .hover-effect:hover
   transform: translateY(-1rem)

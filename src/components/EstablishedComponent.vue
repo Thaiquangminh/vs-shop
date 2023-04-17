@@ -1,5 +1,5 @@
 <template>
-  <v-container class="establish-wrapper">
+  <v-container fluid class="establish-wrapper">
     <HeaderSection :header="establishHeader" />
     <v-row>
       <v-col
@@ -37,25 +37,26 @@ export default {
         title: "BEHIND THE PEOPLE",
         subtitle:
           "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        haveDivider: true,
       },
       establishMembers: [
         {
-          img: "img-1.jpg",
+          img: "teams/img-1.jpg",
           name: "Frank Johnson",
           position: "CEO",
         },
         {
-          img: "img-2.jpg",
+          img: "teams/img-2.jpg",
           name: "Elaine Stclair",
           position: "DESIGNER",
         },
         {
-          img: "img-3.jpg",
+          img: "teams/img-3.jpg",
           name: "Wanda Arthur",
           position: "DEVELOPER",
         },
         {
-          img: "img-4.jpg",
+          img: "teams/img-4.jpg",
           name: "Joshua Stemple",
           position: "MANAGER",
         },
@@ -68,9 +69,9 @@ export default {
 <style lang="sass" scoped>
 .establish-wrapper
   background-color: #f8f9fa
-  margin-top: 20px
+  margin-top: -15px
   margin-bottom: 20px
-  padding: 50px 30px
+  padding: 10px 30px 40px 30px
 
 .establish-card-wrapper
   background-color: #f8f9fa
@@ -90,8 +91,6 @@ export default {
   object-fit: cover
   max-width: 100%
 
-.hover-effect
-  transition: all 0.6s ease-in-out
 .hover-effect:hover
   transform: translateY(-2rem)
 </style>

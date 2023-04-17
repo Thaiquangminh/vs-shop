@@ -1,5 +1,5 @@
 <template>
-  <v-container class="features-wrapper">
+  <v-container fluid class="features-wrapper">
     <v-row>
       <v-col md="6" sm="12" xs="12">
         <v-card elevation="0" class="features-card">
@@ -51,6 +51,7 @@
 
 .features-wrapper
   margin-top: 70px
+  margin-bottom: 70px
 
 li
   color: #dc3545
@@ -70,9 +71,6 @@ li
   color: #fff
   letter-spacing: 0.5px
   padding: 22px 16px !important
-
-.hover-effect
-  transition: all 0.3s ease-in-out
 
 .hover-effect:hover
   transform: translateY(-0.4rem)

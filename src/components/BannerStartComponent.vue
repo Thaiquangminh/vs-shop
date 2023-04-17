@@ -14,7 +14,9 @@ export default {
         subtitle:
           "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
         isBanner: true,
-        backgroundBanner: true,
+        haveBtn: true,
+        haveDivider: true,
+        textBtn: "Get Started",
       },
     };
   },
