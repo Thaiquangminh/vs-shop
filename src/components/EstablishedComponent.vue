@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="establish-wrapper">
+  <v-container fluid class="establish-wrapper" id="team">
     <HeaderSection :header="establishHeader" />
     <v-row>
       <v-col

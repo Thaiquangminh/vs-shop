@@ -1,84 +1,125 @@
 <template>
-  <scrollactive active-class="active" :offset="80" :duration="100">
-    <v-app-bar app elevation="0" class="wrapper-nav-bar">
-      <v-container d-flex>
-        <v-row>
-          <v-col md="3" sm="3">
-            <div class="nav-item nav-item-brand">
-              <a class="navbar-brand nav-link text-uppercase" href="/dorinUI">
-                VSTECH
-              </a>
-            </div>
-          </v-col>
-          <v-col
-            md="7"
-            class="d-flex align-center"
-            v-if="!$vuetify.breakpoint.smAndDown"
-          >
-            <v-row>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#home" class="nav-link scrollactive-item">Home</a>
-                </div>
-              </v-col>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#features" class="nav-link scrollactive-item"
-                    >Features</a
-                  >
-                </div>
-              </v-col>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#pricing" class="nav-link scrollactive-item"
-                    >Pricing</a
-                  >
-                </div>
-              </v-col>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#team" class="nav-link scrollactive-item">Team</a>
-                </div>
-              </v-col>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#blog" class="nav-link scrollactive-item">Blog</a>
-                </div>
-              </v-col>
-              <v-col>
-                <div class="nav-item">
-                  <a href="#contact" class="nav-link scrollactive-item"
-                    >Contact</a
-                  >
-                </div>
-              </v-col>
-            </v-row>
-          </v-col>
-
-          <v-col
-            md="2"
-            class="nav-item-btn"
-            v-if="!$vuetify.breakpoint.smAndDown"
-          >
-            <v-btn
-              rounded
-              class="nav-bar-btn waves-effect waves-light hover-effect"
-              >Try it Free</v-btn
+  <v-app-bar app elevation="0" class="wrapper-nav-bar" id="nav-bar">
+    <v-container d-flex>
+      <v-row>
+        <v-col md="3" sm="3">
+          <div class="nav-item nav-item-brand">
+            <div
+              class="navbar-brand nav-link text-uppercase"
+              @click="handleBackToTop"
             >
-          </v-col>
-
-          <v-col
-            md="3"
-            v-if="$vuetify.breakpoint.smAndDown"
-            class="d-flex justify-end"
+              VSTECH
+            </div>
+          </div>
+        </v-col>
+        <v-col
+          md="7"
+          class="d-flex align-center"
+          v-if="!$vuetify.breakpoint.smAndDown"
+        >
+          <v-row>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#home"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Home</a
+                >
+              </div>
+            </v-col>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#features"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Features</a
+                >
+              </div>
+            </v-col>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#pricing"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Pricing</a
+                >
+              </div>
+            </v-col>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#team"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Team</a
+                >
+              </div>
+            </v-col>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#blog"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Blog</a
+                >
+              </div>
+            </v-col>
+            <v-col>
+              <div class="nav-item">
+                <a
+                  href="#contact"
+                  class="nav-link scrollactive-item"
+                  @click="handleActive"
+                  >Contact</a
+                >
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col
+          md="2"
+          class="nav-item-btn"
+          v-if="!$vuetify.breakpoint.smAndDown"
+        >
+          <v-btn
+            rounded
+            class="nav-bar-btn waves-effect waves-light hover-effect"
+            >Try it Free</v-btn
           >
-            <v-icon class="nav-bar-icon">fa-bars</v-icon>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-app-bar>
-  </scrollactive>
+        </v-col>
+        <v-col
+          md="3"
+          v-if="$vuetify.breakpoint.smAndDown"
+          class="d-flex justify-end"
+        >
+          <v-icon class="nav-bar-icon">fa-bars</v-icon>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app-bar>
 </template>
+
+<script>
+export default {
+  methods: {
+    handleActive(e) {
+      const nodeList = document.querySelectorAll(".active");
+      const newArray = [...nodeList];
+      newArray.map((item) => {
+        item.classList.remove("active");
+      });
+      e.target.classList.add("active");
+    },
+    handleBackToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+};
+</script>
 
 <style lang="sass" scoped>
 .wrapper-nav-bar
@@ -91,6 +132,7 @@
   margin-right: 45px
 
 .navbar-brand
+  cursor: pointer
   color: white !important
   font-weight: 700
   letter-spacing: 2px
@@ -136,7 +178,10 @@
 //  user-select: none
 //  -webkit-tap-highlight-color: transparent
 
- //hover effect
+.active
+  color: #fff
+
+//hover effect
 .hover-effect:hover
   transform: translateY(-0.3rem)
 </style>

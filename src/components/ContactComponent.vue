@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="wrapper-contact">
+  <v-container fluid class="wrapper-contact" id="contact">
     <HeaderSection :header="contactHeader" />
     <v-row
       :class="{

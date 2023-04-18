@@ -3,14 +3,13 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-import Scrollactive from "vue-scrollactive";
-
+import { useActive } from "vue-use-active-scroll";
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
   vuetify,
-  Scrollactive,
+  useActive,
   render: (h) => h(App),
 }).$mount("#app");

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pricing-wrapper">
+  <v-container fluid class="pricing-wrapper" id="pricing">
     <HeaderSection :header="pricingHeader" />
     <v-row>
       <v-col
@@ -113,6 +113,7 @@ export default {
   background-color: #f8f9fa
   margin-bottom: 20px
   padding: 10px 30px 30px 30px
+  margin-top: 12px
 
 .pricing-text
   font-weight: 500

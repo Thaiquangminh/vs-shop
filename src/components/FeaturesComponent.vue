@@ -1,10 +1,10 @@
 <template>
-  <v-container fluid class="features-wrapper">
+  <v-container fluid class="features-wrapper" id="features">
     <v-row>
       <v-col md="6" sm="12" xs="12">
         <v-card elevation="0" class="features-card">
           <v-card-title>
-            <h3>
+            <h3 class="features-title">
               A digital web design studio creating modern &amp; engaging online
               experiences
             </h3>
@@ -63,6 +63,9 @@ li
 .features-image
   max-width: 100%
   height: auto
+
+.features-title
+  word-break: normal
 
 .features-btn
   margin-top: 30px

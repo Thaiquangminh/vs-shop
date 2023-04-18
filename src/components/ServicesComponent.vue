@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="services-wrapper">
+  <v-container fluid class="services-wrapper" id="home">
     <HeaderSection :header="servicesHeader" />
     <v-row>
       <v-col

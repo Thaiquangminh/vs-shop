@@ -94,6 +94,7 @@
 
 <style lang="sass" scoped>
 .footer-wrapper
+  padding: 0 30px
   background-color: #212529
 
 .wrapper-card
